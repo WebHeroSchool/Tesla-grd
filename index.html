@@ -11,52 +11,40 @@
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,600,700&amp;subset=cyrillic" rel="stylesheet">
   </head>
   <body>
-    <header class="page-header">
-      <nav class="page-navigation">
-        <a href="" class="link-logo">
-          <img
-            src="Images/tesla-logo.svg"
-            alt="Логотип «Тесла»"
-            class="logo"
-          />
-        </a>
-        <ul class="models-list">
-          <li class="models-list__item models-list__item_first">
-            <a class="link page-navigation__link models-list__link_active">
+    <header class="header">
+      <a href="" class="link-logo">
+        <img
+        src="Images/tesla-logo.svg"
+        alt="Логотип «Тесла»"
+        class="logo"
+        />
+      </a>
+          <nav class="navigation">
+            <a class="link navigation__link navigation__link_current">
               Model&nbsp;S
             </a>
-          </li>
-          <li class="models-list__item models-list__item_second">
-            <a href="" class="link page-navigation__link">
+            <a href="" class="link navigation__link">
               Model&nbsp;X
             </a>
-          </li>
-          <li class="models-list__item models-list__item_third">
-            <a href="" class="link page-navigation__link">
+            <a href="" class="link navigation__link">
               Model&nbsp3
             </a>
-          </li>
-          <li class="models-list__item models-list__item_fourth">
-            <a href="" class="link page-navigation__link">
+            <a href="" class="link navigation__link">
               Roadster
             </a>
-          </li>
-          <li class="models-list__item models-list__item_fifth">
-            <a href="" class="link page-navigation__link">
+            <a href="" class="link navigation__link">
               Energy
             </a>
-          </li>
-        </ul>
+      </nav>
         <div class="user-navigation ru">
-          <a href="" class="page-navigation__link user-navigation__item link">Магазин</a>
-          <a href="" class="page-navigation__link user-navigation__item link">Войти</a>
+          <a href="" class="navigation__link user-navigation__item link">Магазин</a>
+          <a href="" class="navigation__link user-navigation__item link">Войти</a>
           <div class="menu menu-burger user-navigation__item"></div>
         </div>
-      </nav>
     </header>
 
     <main class="main">
-      <h1 class="page-heading">Model S</h1>
+      <h1 class="heading">Model S</h1>
       <p class="paragraph_heading ru">Добро пожаловать в будущее!</p>
       <section class="main-specs ru">
         <h2 class="visually-hidden">Основные характеристики</h2>
@@ -142,7 +130,7 @@
           Узнать больше
           <button class="button">Заказать</button>
         </div>
-        <img src="images/scheme.png" alt="Схема автомобиля" width="1049" height="540" class="scheme">
+        <!-- <img src="images/scheme.png" alt="Схема автомобиля" class="scheme"> -->
         <p class="copyright">
           Разработано в
           <img src="images/webhero.svg" alt="Webhero School" width="94" height="25" class="copyright__img"> 
