@@ -1,5 +1,3 @@
-
-
 body {
   margin: auto;
   padding: 0;
@@ -20,7 +18,9 @@ body {
   overflow: hidden;
 }
 
-
+.cockpit {
+  display: none;
+}
 
 .link:active,
 .button:active {
@@ -38,7 +38,7 @@ body {
 
 .link-logo {
   -ms-grid-column-align: left;
-      justify-self: left;
+  justify-self: left;
   margin-top: -16px;
 }
 
@@ -49,7 +49,7 @@ body {
 
 .navigation {
   display: grid;
-  grid-template-columns: repeat(5,auto);
+  grid-template-columns: repeat(5, auto);
   grid-column: 3 / 4;
 }
 
@@ -147,8 +147,12 @@ body {
 }
 
 .additional {
+  position: absolute;
+  margin-top: 3px;
+  max-width: 190px;
   font-size: 12px;
   font-weight: 400;
+  line-height: 1.2;
 }
 
 .spec-list {
@@ -157,7 +161,7 @@ body {
   -ms-grid-columns: auto 70px auto;
   grid-template-columns: auto auto;
   -ms-grid-column-align: right;
-      justify-self: right;
+  justify-self: right;
   justify-items: right;
   grid-column-gap: 70px;
   list-style: none;
@@ -175,7 +179,7 @@ body {
 
 .spec-list__item {
   -ms-grid-column-align: left;
-      justify-self: left;
+  justify-self: left;
 }
 
 .spec-list__item_speed::before {
@@ -201,19 +205,12 @@ body {
   background-size: contain;
 }
 
-.inquire {
-  padding: 13px 0 0 80px;
-  font-size: 13px;
-  font-weight: 700;
-  text-transform: uppercase;
-}
-
 .test-drive {
   position: relative;
   padding-left: 30px;
   -ms-flex-item-align: center;
-      -ms-grid-row-align: center;
-      align-self: center;
+  -ms-grid-row-align: center;
+  align-self: center;
   font-size: 13px;
   font-weight: 700;
   text-transform: uppercase;
@@ -238,6 +235,12 @@ body {
   font-weight: 700;
   text-transform: uppercase;
   text-align: center;
+  -webkit-transition-property: color, background-color;
+  -o-transition-property: color, background-color;
+  transition-property: color, background-color;
+  -webkit-transition-duration: 0.8s, 0.8s;
+  -o-transition-duration: 0.8s, 0.8s;
+  transition-duration: 0.8s, 0.8s;
 }
 
 .button_test-drive {
@@ -245,15 +248,9 @@ body {
   margin-left: 40px;
   color: #c51937;
   background-color: #fff;
-  -webkit-transition-property: color, background-color;
-  -o-transition-property: color, background-color;
-  transition-property: color, background-color;
-  -webkit-transition-duration: 0.8s, 0.8s;
-       -o-transition-duration: 0.8s, 0.8s;
-          transition-duration: 0.8s, 0.8s;
   -ms-flex-item-align: center;
-      -ms-grid-row-align: center;
-      align-self: center;
+  -ms-grid-row-align: center;
+  align-self: center;
 }
 
 .button_test-drive:focus,
@@ -270,6 +267,7 @@ body {
   -ms-grid-columns: 223fr 554fr 223fr;
   grid-template-columns: 223fr 554fr 223fr;
   padding-top: 15px;
+  margin-bottom: 103px;
   background-image: url("images/tesla-logo-grey.svg");
   background-repeat: no-repeat;
   background-size: 106%;
@@ -279,14 +277,13 @@ body {
 .main-specs::before {
   position: absolute;
   content: "";
-  bottom: -51px;
+  bottom: -68px;
   right: calc(50% - 17px);
   width: 34px;
   height: 20px;
   background-image: url("Images/bottom-arrow.svg");
   background-repeat: no-repeat;
   background-size: contain;
-  
 }
 
 .image_main-specs {
@@ -300,14 +297,13 @@ body {
 .main-specs__bottom {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns:  2fr 1fr 1fr;
-  grid-template-columns:  2fr 1fr 1fr;
+  -ms-grid-columns: 2fr 1fr 1fr;
+  grid-template-columns: 2fr 1fr 1fr;
   justify-items: right;
   -ms-grid-column: 2;
   -ms-grid-column-span: 1;
-  grid-column: 2 / 3
+  grid-column: 2 / 3;
 }
-
 
 @media (max-width: 820px) {
   .navigation {
@@ -318,44 +314,44 @@ body {
     justify-items: center;
   }
 }
-  
+
 @media (max-width: 670px) {
-.main-specs {
-  -ms-grid-columns: auto;
-  grid-template-columns: auto;
-}
+  .main-specs {
+    -ms-grid-columns: auto;
+    grid-template-columns: auto;
+  }
 
-.image_main-specs {
-  -ms-grid-column: 1;
-  -ms-grid-column-span: 1;
-  grid-column: 1 / 2;
-}
+  .image_main-specs {
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 1;
+    grid-column: 1 / 2;
+  }
 
-.main-specs__bottom {
-  -ms-grid-columns: 1fr 1fr;
-  grid-template-columns: 1fr 1fr;
-  grid-row-gap: 14px;
-  -ms-grid-column: 1;
-  -ms-grid-column-span: 1;
-  grid-column: 1 / 2;
-  justify-items: center;
-}
+  .main-specs__bottom {
+    -ms-grid-columns: 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
+    grid-row-gap: 27px;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 1;
+    grid-column: 1 / 2;
+    justify-items: center;
+  }
 
-.spec-list {
-  -ms-grid-column: 1;
-  -ms-grid-column-span: 2;
-  grid-column: 1 / 3;
-  -ms-grid-column-align: center;
-      justify-self: center;
-}
+  .spec-list {
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 2;
+    grid-column: 1 / 3;
+    -ms-grid-column-align: center;
+    justify-self: center;
+  }
 
-.button_test-drive {
-  margin: auto;
-}
+  .button_test-drive {
+    margin: auto;
+  }
 }
 
 @media (max-width: 500px) {
-  .navigation {
+  .header {
     padding: 21px 19px 0 0;
     grid-auto-flow: column;
   }
@@ -397,19 +393,19 @@ body {
     margin-bottom: 25px;
     width: 95%;
   }
-  
+
   .heading {
     font-size: 50px;
     margin-bottom: 6px;
   }
 
   .paragraph_heading {
-      font-size: 10px;
-      margin-bottom: 34px;
+    font-size: 10px;
+    margin-bottom: 34px;
   }
 
   .number {
-      font-size: 27px;
+    font-size: 27px;
   }
 
   .spec-list {
@@ -419,7 +415,7 @@ body {
   }
 
   .spec-list__item {
-      font-size: 15px;
+    font-size: 15px;
   }
 
   .spec-list__item_distance {
@@ -428,24 +424,20 @@ body {
 
   .spec-list__item_speed::before {
     top: 8px;
-    left: 4px;  
-      width: 38px;
-      height: 28px;
+    left: 4px;
+    width: 38px;
+    height: 28px;
   }
 
   .spec-list__item_distance::before {
     top: 3px;
     left: 41px;
     width: 25px;
-      height: 41px;
+    height: 41px;
   }
 
   .additional {
     font-size: 10px;
-  }
-
-  .inquire {
-    padding-left: 34px;
   }
 
   .test-drive {
@@ -463,4 +455,160 @@ body {
   }
 }
 
+/* second part */
+
+.features {
+  display: grid;
+  grid-template-columns: auto 440px;
+  padding: 0 0 0 79px;
+  background-image: url("Images/cockpit.jpg");
+  background-position: 0 100%;
+  background-repeat: no-repeat;
+  background-color: #fff;
+}
+
+.features__heading {
+  margin: 0;
+  padding-top: 61px;
+  font-size: 70px;
+  font-weight: 600;
+  color: #e51937;
+}
+
+.features-description {
+  padding: 45px 72px 63px 52px;
+  color: #fff;
+  background-color: #e51937;
+}
+
+.paragraph-heading {
+  margin: 0 0 11px 0;
+  padding-top: 5px;
+  font-size: 30px;
+  font-weight: 600;
+}
+
+.paragraph {
+  margin-top: 10px;
+  margin-bottom: 54px;
+  font-size: 15px;
+  font-weight: 500;
+  line-height: 1.2;
+}
+
+.features-list {
+  list-style: none;
+  margin: 0 0 204px 0;
+  padding: 15px 0 0 0;
+}
+
+.features-list__item {
+  position: relative;
+  margin-bottom: 64px;
+  padding-left: 59px;
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 0.9;
+}
+
+.features-list__item_display::before {
+  position: absolute;
+  top: 4px;
+  left: 0;
+  content: "";
+  width: 36px;
+  height: 53px;
+  background-image: url("images/display.svg");
+}
+
+.features-list__item_wifi::before {
+  position: absolute;
+  top: 12px;
+  left: -7px;
+  content: "";
+  width: 44px;
+  height: 34px;
+  background-image: url("Images/wifi.svg");
+}
+
+.features-list__item_trunk::before {
+  position: absolute;
+  top: 5px;
+  left: -2px;
+  content: "";
+  width: 36px;
+  height: 52px;
+  background-image: url("Images/trunk.svg");
+}
+
+.inquire {
+  position: relative;
+  display: grid;
+  grid-template-columns: 135px auto;
+  grid-column-gap: 23px;
+  align-items: center;
+  padding-left: 27px;
+
+  font-size: 13px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.inquire::before {
+  position: absolute;
+  content: "";
+  width: 22px;
+  height: 22px;
+  background-image: url("Images/info.svg");
+}
+
+.button_inquire {
+  border: 2px solid #fff;
+  color: #ffffff;
+  background-color: #e51937;
+}
+
+.button_inquire:focus,
+.button_inquire:hover {
+  cursor: pointer;
+  color: #e51937;
+  background-color: #fff;
+}
+
+@media (max-width: 820px) {
+  .main-specs {
+    margin-bottom: 63px;
+  }
+
+  .main-specs::before {
+    bottom: -51px;
+  }
+  
+  .features {
+    grid-template-columns: auto;
+    padding: 0;
+  }
+
+  .features__heading {
+    display: none;
+  }
+
+  .cockpit {
+    display: block;
+    width: 100%;
+  }
+}
+  
+
+@media (max-width: 670px) {
+  .features-list,
+  .inquire {
+    display: none;
+  }
+
+  .features-description {
+    padding: 18px 30px;
+  }
+
+}
 
