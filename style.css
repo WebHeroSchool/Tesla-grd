@@ -189,7 +189,7 @@ body {
   content: "";
   width: 46px;
   height: 35px;
-  background-image: url("Images/speed.svg");
+  background-image: url("images/speed.svg");
   background-size: contain;
 }
 
@@ -281,7 +281,7 @@ body {
   right: calc(50% - 17px);
   width: 34px;
   height: 20px;
-  background-image: url("Images/bottom-arrow.svg");
+  background-image: url("images/bottom-arrow.svg");
   background-repeat: no-repeat;
   background-size: contain;
 }
@@ -461,7 +461,7 @@ body {
   display: grid;
   grid-template-columns: auto 440px;
   padding: 0 0 0 79px;
-  background-image: url("Images/cockpit.jpg");
+  background-image: url("images/cockpit.jpg");
   background-position: 0 100%;
   background-repeat: no-repeat;
   background-color: #fff;
@@ -532,7 +532,7 @@ body {
   content: "";
   width: 44px;
   height: 34px;
-  background-image: url("Images/wifi.svg");
+  background-image: url("images/wifi.svg");
 }
 
 .features-list__item_trunk::before {
@@ -542,7 +542,7 @@ body {
   content: "";
   width: 36px;
   height: 52px;
-  background-image: url("Images/trunk.svg");
+  background-image: url("images/trunk.svg");
 }
 
 .inquire {
@@ -563,7 +563,7 @@ body {
   content: "";
   width: 22px;
   height: 22px;
-  background-image: url("Images/info.svg");
+  background-image: url("images/info.svg");
 }
 
 .button_inquire {
@@ -630,7 +630,7 @@ body {
   grid-template-rows: auto auto;
   padding: 0;
   background-color: #fff;
-  background-image: url("Images/model-s.svg");
+  background-image: url("images/model-s.svg");
   background-repeat: no-repeat;
   background-position: 100% 19%;
   background-size: 55%;
@@ -669,7 +669,7 @@ body {
   content: "";
   width: 137px;
   height: 25px;
-  background-image: url("Images/star.svg");
+  background-image: url("images/star.svg");
   background-repeat: repeat-x;
 }
 
@@ -699,7 +699,7 @@ top: 8px;
 content: "";
 width: 62px;
 height: 74px;
-background-image: url("Images/safety.svg");
+background-image: url("images/safety.svg");
 }
 
 .inquire-safety {
